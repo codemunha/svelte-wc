@@ -48,11 +48,11 @@ export default defineConfig({
           format: "cjs",
           dir: "dist/cjs",
         },
-        {
-          entryFileNames: (filePath) => getFileName(filePath),
-          format: "amd",
-          dir: "dist/amd",
-        }
+        // {
+        //   entryFileNames: (filePath) => getFileName(filePath),
+        //   format: "amd",
+        //   dir: "dist/amd",
+        // }
       ],
 
     }
