@@ -8,6 +8,7 @@
 
 <style>
   button {
+    border-radius: var(--border-rabius, 0px);
     padding: var(--padding, 0.25em);
     margin: var(--margin, 0.25em);
     color: var(--color);
