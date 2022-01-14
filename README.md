@@ -1,6 +1,6 @@
 # SVELTE WC
 <center>
-<img src="svelte-wc.png"  width="100%"/> 
+<img src="./svelte-wc.png"  width="100%"/> 
 </center>
 ## Recommended IDE Setup
 
