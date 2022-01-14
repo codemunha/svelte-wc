@@ -1,5 +1,12 @@
-import sveltePreprocess from 'svelte-preprocess'
+import sveltePreprocess from "svelte-preprocess";
 
 export default {
-  preprocess: sveltePreprocess()
-}
+  preprocess: sveltePreprocess(),
+  plugins: [
+    svelte({
+      compilerOptions: {
+        customElement: true,
+      },
+    }),
+  ],
+};
