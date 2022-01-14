@@ -6,19 +6,25 @@
   <link rel="icon" href="/favicon.ico" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Svelte + TS + Vite App</title>
+  <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    sv-button {
-      --padding: 0.75em;
-      --color: blue;
+    s-button {
+      --color: red;
     }
   </style>
 </head>
 
 <body>
   <script type="module" src="/dist/esm/index.js"></script>
-  <my-counter></my-counter>
-  <sv-button label="Svelte Button"></sv-button>
-  <sv-button-submit></sv-button-submit>
+  <s-button>
+    <div class="p-4 text-green-600" slot="content">Button Slot</div>
+  </s-button>
+
+  <s-button label="custom css properties" style="--padding: 6px; --color:blue;">
+  </s-button>
+
+  <s-button label="custom props" padding="6px" size="20px" color="red">
+  </s-button>
   <!-- <div id="app"></div>
   <script type="module" src="/src/main.ts"></script> -->
 </body>
