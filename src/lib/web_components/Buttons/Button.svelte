@@ -24,22 +24,13 @@
 
 <style>
   button {
-    padding: var(--padding, 0.25em);
-    margin: var(--margin, 0.25em);
-    color: var(--color, black);
-    background-color: var(--background-color, transparent);
-    font-size: var(--font-size, 14px);
-    cursor: var(--cursor, pointer);
-    border: var(--border, 1px solid #000);
-  }
-
-  button {
     border-radius: var(--border-rabius, 0px);
     padding: var(--padding, 0.25em);
     margin: var(--margin, 0.25em);
     color: var(--color);
-    background-color: var(--background-color);
-    font-size: var(--font-size);
+    background-color: var(--background-color, transparent);
+    font-size: var(--font-size, 14px);
+    cursor: var(--cursor, pointer);
     border: var(--border, 1px solid #000);
   }
   button:focus {
