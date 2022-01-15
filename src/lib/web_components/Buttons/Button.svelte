@@ -34,7 +34,7 @@
 <style>
   button {
     border-radius: var(--border-rabius, 0px);
-    padding: var(--padding, 0.25em);
+    padding: var(--padding, 0.5em);
     margin: var(--margin);
     color: var(--color, black);
     background-color: var(--background-color, rgb(248, 248, 248));
