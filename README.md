@@ -30,7 +30,7 @@ use by unpkg
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Svelte + TS + Vite App</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script type="module" src="https://unpkg.com/svelte-wc@0.1.4/dist/esm/index.js"></script>
+  <script type="module" src="https://unpkg.com/svelte-wc@0.1.6/dist/esm/index.js"></script>
   <style>
     sv-button {
       --color: rgb(241, 199, 9);
@@ -40,14 +40,31 @@ use by unpkg
 
 <body>
   <s-button>
-    <div class="p-4 text-red-200 font-bold bg-blue-500" slot="content">Button Slot</div>
+    <button class=" p-4 text-white font-bold bg-blue-500 rounded-3xl w-48 hover:bg-red-500" slot="content">
+      Button Slot
+      </button>
   </s-button>
-
-  <s-button label="custom css properties" style="--padding: 6px; --color:blue;">
-  </s-button>
-
-  <s-button label="custom props" padding="6px" size="20px" color="red">
-  </s-button>
+  <div>
+    <s-button label="custom css properties" style="--padding: 6px; --color:blue;">
+    </s-button>
+  </div>
+  <div>
+    <s-button label="custom props" padding="6px" size="20px" color="green">
+    </s-button>
+  </div>
+  <div>
+    <s-button label="custom css properties inline" style="--padding: 0.75em;
+    --color: rgb(241, 199, 9);
+    --margin: 0.25em;
+    --background-color: red;
+    --font-size: 2rem;
+    --border: 2px;
+    --border-rabius: 60px;
+    --border-focus: 3px;
+    --background-color-active: rgba(255, 0, 0, 0.699);
+    --background-color-hover: rgb(148, 1, 1);">
+    </s-button>
+  </div>
 
 </body>
 
