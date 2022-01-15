@@ -6,13 +6,13 @@
   export let padding = "1px";
   export let margin = "1px";
   export let color;
-  export let size;
+  export let fontsize;
 
   $: styleVars = {
     padding,
     margin,
     color,
-    "font-size": size,
+    "font-size": fontsize,
   };
 </script>
 
@@ -27,9 +27,10 @@
     padding: var(--padding, 0.25em);
     margin: var(--margin, 0.25em);
     color: var(--color, black);
-    background-color: var(--background-color, transparent);
+    background-color: var(--background-color, rgb(248, 248, 248));
     font-size: var(--font-size, 14px);
     cursor: var(--cursor, pointer);
+    width: var(--width, max-content);
     /* border: var(--border, 1px solid #000); */
   }
 </style>
