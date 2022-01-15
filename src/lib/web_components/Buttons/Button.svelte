@@ -19,17 +19,37 @@
 {#if $$slots.content}
   <slot name="content" />
 {:else}
-  <div {...$$props} use:cssVars={styleVars}>{label}</div>
+  <button {...$$props} use:cssVars={styleVars}>{label}</button>
 {/if}
 
 <style>
-  div {
+  button {
     padding: var(--padding, 0.25em);
     margin: var(--margin, 0.25em);
     color: var(--color, black);
     background-color: var(--background-color, transparent);
     font-size: var(--font-size, 14px);
     cursor: var(--cursor, pointer);
-    /* border: var(--border, 1px solid #000); */
+    border: var(--border, 1px solid #000);
+  }
+
+  button {
+    border-radius: var(--border-rabius, 0px);
+    padding: var(--padding, 0.25em);
+    margin: var(--margin, 0.25em);
+    color: var(--color);
+    background-color: var(--background-color);
+    font-size: var(--font-size);
+    border: var(--border, 1px solid #000);
+  }
+  button:focus {
+    border: var(--border-focus, 1px solid #000);
+  }
+
+  button:active {
+    background-color: var(--background-color-active,#000);
+  }
+  button:hover {
+    background-color: var(--background-color-hover,rgb(49, 49, 49));
   }
 </style>
