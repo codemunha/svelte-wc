@@ -3,7 +3,6 @@ import { svelte } from '@sveltejs/vite-plugin-svelte'
 import path from "path";
 import fs from "fs";
 
-
 let basePath = "./src/lib/web_components";
 const getAllFiles = (dir) =>
   fs.readdirSync(dir).reduce((files, file) => {
@@ -19,8 +18,6 @@ const getFileName = (filePath) => {
   const fileName_ok = filename.replace('.ts', '.js')
   return `${fileName_ok.replace('/', '')}`;
 }
-
-
 
 export default defineConfig({
   plugins: [
