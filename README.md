@@ -30,7 +30,7 @@ use by unpkg
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Svelte + TS + Vite App</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script type="module" src="https://unpkg.com/svelte-wc@0.1.7/dist/esm/index.js"></script>
+  <script type="module" src="https://unpkg.com/svelte-wc@0.1.8/dist/esm/index.js"></script>
   <style>
     :root {
       --color: rgb(250, 250, 250);
@@ -48,19 +48,37 @@ use by unpkg
 </head>
 
 <body>
-   <s-button style="">
-    <button  class=" p-4 text-white font-bold bg-blue-500 rounded-3xl w-48 hover:bg-red-500" slot="content">Button Slot</button>
+   
+  <s-button label="custom css properties" style="--padding: 6px; --color:blue;">
   </s-button>
+
+  <s-button label="custom props" padding="6px" fontsize="20px" color="red">
+  </s-button>
+
+  <button class=" p-4 text-white font-bold bg-blue-500 rounded-3xl w-48 hover:bg-red-500" slot="content">
+    <i class="fa fa-user"></i> Button Slot
+  </button>
   <div>
-    <s-button label="custom css properties" style="--padding: 10px"></s-button>
+    <s-button label="Button With Icon Right" icon="far fa-chevron-down" position="right" />
   </div>
   <div>
-    <s-button   label="custom props" padding="10px" size="20px" color="green">
-    </s-button>
+    <s-button label="Button With Icon Right" icon="far fa-cloud-download"
+      style="--background-color: #62A420; --padding: 12px;" />
+  </div>
+
+
+  <div>
+    <s-button label="ACTION RED" icon="far fa-chevron-down" position="right"
+      style="--background-color: #E62700; --padding: 12px;" />
+  </div>
+
+
+  <div>
+    <s-button label="Button With Icon Right" icon="far fa-cloud-download" position="left"
+      style="--background-color: #CCCCCC; --padding: 12px; --color: black;" />
   </div>
   <div>
-    <s-button label="custom css properties inline" style="">
-    </s-button>
+    <s-button label="Button With Icon Right" icon="far fa-cloud-download" position="left" />
   </div>
 
 </body>
